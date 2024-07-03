@@ -89,6 +89,8 @@ body {
 
 .salir button {
     position: absolute;
+    background-color: #ff4d4d;
+    color: white;
     bottom: 2px; /* Ajustado para que esté en la esquina inferior */
     right: 10px; /* Ajustado para que esté en la esquina derecha */
     font-size: 10px; /* Ajuste del tamaño de fuente */

@@ -14,4 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // En el evento submit del formulario de login (index.html)
+    document.querySelector('#login-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita que se envíe el formulario y se recargue la página
+
+        // Aquí podrías realizar una validación real de credenciales si fuera necesario
+        //aqui va la logica de autenticacion
+        // Redirigir al usuario a la página de menú
+        window.location.href = '../Menu/menu.html';
+    });
 });

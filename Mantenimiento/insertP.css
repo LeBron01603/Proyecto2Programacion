@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url('telemedicina.jpg') no-repeat center center fixed; /* Ajusta la imagen de fondo */
+    background: url('../telemedicina.jpg') no-repeat center center fixed; /* Ajusta la imagen de fondo */
     background-size: cover; /* Cubre todo el fondo */
 }
 

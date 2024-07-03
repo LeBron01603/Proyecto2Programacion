@@ -151,6 +151,16 @@ body {
     cursor: pointer;
     margin-right: 10px;
 }
+.Mantenimiento .btn-salir {
+    padding: 8px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
 
 .Mantenimiento .btn:last-child {
     margin-right: 0;
