@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -13,8 +14,36 @@ body {
     background-size: cover;
     background-position: center;
 }
+.title-icon-wrapper {
+    text-align: center;
+}
+
+.Mantenimiento h2 {
+    font-size: 28px; /* Tamaño más pequeño para el título */
+    text-align: center;
+    margin-top: 0; /* Mover el título hacia arriba */
+}
+
+.Mantenimiento .icono-titulo {
+    font-size: 36px; /* Tamaño más grande para el icono */
+    margin-top: 10px; /* Espacio entre el título y el icono */
+    text-align: center;
+}
+
+.icono-titulo {
+    font-size: 36px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.title-divider {
+    margin: 20px auto;
+    width: 90%;
+    border-top: 1px solid #ccc;
+}
+
 .ventana {
-    width: 800px; /* Aumentamos el ancho */
+    width: 900px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
@@ -23,62 +52,96 @@ body {
     border-radius: 15px;
     padding: 30px 40px;
 }
+
 .tabs {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Espacio entre las pestañas y el contenido */
     display: flex;
     justify-content: space-between;
 }
-.tab {
-    padding: 10px 20px;
-    background-color: #f0f0f0;
+
+.tab {/*Pestaña listado*/
+    padding: 2px 10px; /* Reducir el tamaño de las pestañas */
+    background-color: #2d3033; /* Cambiar el color de las pestañas */
     cursor: pointer;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 24px;
     border-bottom: none;
+    font-size: 12px;
+    line-height: 24px;
 }
-.tab.active {
-    background-color: #ccc;
+
+.tab.active {/*Pestaña de mantenimiento*/
+    padding: 2px 10px; /* Reducir el tamaño de las pestañas */
+    background-color: #2d3033; /* Cambiar el color de las pestañas activas */
+    cursor: pointer;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 8px;
+    border-bottom: none;
+    font-size: 12px;
+    line-height: 24px;
 }
+
 .content-section {
     display: none;
     padding-top: 20px;
-    border: 1px solid #ccc; /* Línea divisoria */
+    border: 1px solid #ccc;
     border-top: none;
     padding: 20px;
 }
+
 .content-section.active {
     display: block;
 }
+
 .section-title {
-    font-size: 18px;
+    font-size: 16px; /* Tamaño más pequeño para el título de sección */
     font-weight: bold;
     margin-bottom: 10px;
+    padding-bottom: 10px; /* Espacio entre el título y los labels */
+    border-bottom: 1px solid #ccc; /* Línea divisoria */
 }
+
 .Mantenimiento {
     margin-bottom: 20px;
 }
+
 .Mantenimiento form {
     display: grid;
     gap: 10px;
 }
+
 .Mantenimiento label {
-    color: #aaa;
+    color: #f7f5f5; /* Color más suave para los labels */
 }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.form-row > div {
+    width: 100%;
+}
+
 .Mantenimiento input,
 .Mantenimiento select {
-    padding: 8px;
+    padding: 6px; /* Ajustar el padding para los inputs y selects */
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
 }
+
 .Mantenimiento .Direccion input {
-    height: 60px; /* Aumentamos el tamaño del campo Dirección */
+    height: 40px; /* Ajustar el tamaño del campo Dirección */
 }
+
 .Mantenimiento .form-actions {
     display: flex;
-    justify-content: center; /* Centramos los botones */
+    justify-content: center;
     margin-top: 20px;
 }
+
 .Mantenimiento .btn {
     padding: 8px 20px;
     background-color: #4CAF50;
@@ -88,9 +151,107 @@ body {
     cursor: pointer;
     margin-right: 10px;
 }
+
 .Mantenimiento .btn:last-child {
     margin-right: 0;
 }
+
 .Mantenimiento .btn:hover {
     background-color: #45a049;
+}
+
+.listado {
+    display: none;
+    color: #333;
+    padding: 20px;
+}
+
+.listado h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.title-divisoria {
+    margin: 20px auto;
+    width: 90%;
+    border-top: 1px solid #ccc;
+}
+
+.Listado.active {
+    display: block; /* Mostrar cuando la pestaña está activa */
+}
+
+/* Estilos para la tabla de listado */
+.user-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-table th,
+.user-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.user-table td input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.user-table td.actions {
+    text-align: center;
+}
+/* Estilos para el botón Consultar Usuarios */
+.Listado #btn-consultar {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Listado #btn-consultar:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el botón Salir en el listado */
+.Listado .btn-exit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Listado .btn-exit:hover {
+    background-color: #ff6666;
+}
+
+/* Estilos para el botón Eliminar en la tabla de usuarios */
+.user-table td.actions button {
+    padding: 6px 12px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.user-table td.actions button:hover {
+    background-color: #ff6666;
 }

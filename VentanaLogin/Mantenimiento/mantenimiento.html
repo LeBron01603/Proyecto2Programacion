@@ -6,21 +6,7 @@
     <title>Mantenimiento</title>
     <link rel="stylesheet" href="mantenimiento.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        /* Estilos específicos para la pestaña de Listado */
-        .listado {
-            display: none;
-        }
-        .tab {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-        .tab.active {
-            background-color: #ccc;
-        }
-    </style>
+
 </head>
 <body>
     <div class="ventana">
@@ -29,79 +15,122 @@
             <div id="tab-listado" class="tab">Listado</div>
         </div>
 
+
         <div id="mantenimiento-content" class="content-section active">
             <div class="Mantenimiento">
-                <h3>Mantenimiento de usuarios</h3>
+                <div class="title-icon-wrapper">
+                    <h2>Mantenimiento de usuarios</h2>
+                    <div class="icono-titulo">
+                        <i class='bx bx-cog'></i>
+                    </div>
+                </div>
+                <hr class="title-divider"> <!-- Línea divisoria -->
+
                 <form method="post">
-                    <div class="Identificación">
-                        <label for="Identificación">Identificación:</label>
-                        <input type="text" id="Identificación" name="Identificación">
+                    <div class="form-row">
+                        <div class="Identificación">
+                            <label for="Identificación">Identificación:</label>
+                            <input type="text" id="Identificación" name="Identificación">
+                        </div>
                     </div>
-                    <div class="Nombre">
-                        <label for="Nombre">Nombre:</label>
-                        <input type="text" id="Nombre" name="Nombre">
+                    <div class="form-row">
+                        <div class="Nombre">
+                            <label for="Nombre">Nombre:</label>
+                            <input type="text" id="Nombre" name="Nombre">
+                        </div>
+                        <div class="Apellidos">
+                            <label for="Apellidos">Apellidos:</label>
+                            <input type="text" id="Apellidos" name="Apellidos">
+                        </div>
                     </div>
-                    <div class="Apellidos">
-                        <label for="Apellidos">Apellidos:</label>
-                        <input type="text" id="Apellidos" name="Apellidos">
+                    <div class="form-row">
+                        <div class="Sexo">
+                            <label for="Sexo">Sexo:</label>
+                            <i class='bx bx-male-female'></i>
+                            <select id="Sexo" name="Sexo">
+                                <option value="M" selected>Masculino</option>
+                                
+                                <option value="F">Femenino</option>
+                                
+                                <option value="X">No se aceptan más sexos</option>
+                            </select>
+                        </div>
+                        <div class="Fecha_nacimiento">
+                            <label for="Fecha_nacimiento">Fecha Nacimiento:</label>
+                            <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento">
+                        </div>
                     </div>
-                    <div class="Sexo">
-                        <label for="Sexo">Sexo:</label>
-                        <select id="Sexo" name="Sexo">
-                            <option value="M" selected>M</option>
-                            <option value="F">F</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="Direccion">
+                            <label for="Direccion">Dirección:</label>
+                            <input type="text" id="Direccion" name="Direccion">
+                        </div>
                     </div>
-                    <div class="Fecha_nacimiento">
-                        <label for="Fecha_nacimiento">Fecha Nacimiento:</label>
-                        <input type="date" id="Fecha_nacimiento" name="Fecha_nacimiento">
+                    <div class="form-row">
+                        <div class="Teléfono">
+                            <label for="Teléfono">Teléfono:</label>
+                            <input type="text" id="Teléfono" name="Teléfono">
+                        </div>
+                        <div class="E-mail">
+                            <label for="E-mail">E-mail:</label>
+                            <input type="email" id="E-mail" name="E-mail">
+                        </div>
                     </div>
-                    <div class="Direccion">
-                        <label for="Direccion">Dirección:</label>
-                        <input type="text" id="Direccion" name="Direccion">
-                    </div>
-                    <div class="Teléfono">
-                        <label for="Teléfono">Teléfono:</label>
-                        <input type="text" id="Teléfono" name="Teléfono">
-                    </div>
-                    <div class="E-mail">
-                        <label for="E-mail">E-mail:</label>
-                        <input type="email" id="E-mail" name="E-mail">
-                    </div>
-                    <div class="Acceso">
-                        <label for="Acceso">Acceso:</label>
-                        <select id="Acceso" name="Acceso">
-                            <option value="admin" selected>Administrativo</option>
-                        </select>
-                    </div>
-                    <div class="Usuario">
-                        <label for="Usuario">Usuario:</label>
-                        <input type="text" id="Usuario" name="Usuario">
-                    </div>
-                    <div class="Password">
-                        <label for="Password">Password:</label>
-                        <input type="password" id="Password" name="Password">
+                    <div class="form-row">
+                        <div class="Acceso">
+                            <label for="Acceso">Acceso:</label>
+                            <select id="Acceso" name="Acceso">
+                                <option value="admin" selected>Administrativo</option>
+                            </select>
+                        </div>
+                        <div class="Usuario">
+                            <label for="Usuario">Usuario:</label>
+                            <input type="text" id="Usuario" name="Usuario">
+                        </div>
+                        <div class="Password">
+                            <label for="Password">Password:</label>
+                            <input type="password" id="Password" name="Password">
+                        </div>
                     </div>
                     <div class="form-actions">
-                        <button type="submit" class="btn">Guardar</button>
-                        <button type="button" class="btn">Actualizar</button>
-                        <button type="reset" class="btn">Cancelar</button>
+                        <button type="submit" class="btn">Actualizar</button>
+                        <button type="button" class="btn">Cancelar</button>
+                        <button type="reset" class="btn">Salir</button>
                     </div>
                 </form>
             </div>
+            
         </div>
 
         <div id="listado-content" class="content-section">
-            <h3>Listado de usuarios</h3>
-            <!-- El listado mostrará todos los datos del usuario, será el consultar,
-             selecciona un usuario que salga y le da eliminar -->
-            <div class="form-group">
-                <label for="buscar-usuario">Buscar Usuario:</label>
-                <input type="text" id="buscar-usuario" name="buscar-usuario">
-                <button type="button">Buscar</button>
-            </div>
-            <div id="resultado-listado">
-                <!-- Aquí mostrarías el resultado del listado de usuarios -->
+            <div class="Listado">
+                <div class="title-icon-wrapper">
+                    <h2>Listado usuarios</h2>
+                </div>
+                <hr class="title-divisoria"> <!-- Línea divisoria -->
+
+                <button id="btn-consultar" class="btn">Consultar Usuarios</button>
+                <div id="resultado-listado">
+                    <table class="user-table">
+                        <thead>
+                            <tr>
+                                <th>Identificación</th>
+                                <th>Nombre 1</th>
+                                <th>Nombre 2</th>
+                                <th>Apellido 1</th>
+                                <th>Apellido 2</th>
+                                <th>Usuario</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aquí se agregarán las filas dinámicamente con datos de usuarios -->
+                        </tbody>
+                    </table>
+                    <div class="form-actions">
+                        <button class="btn-exit">Salir</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
