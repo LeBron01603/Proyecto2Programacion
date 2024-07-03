@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../Imagen.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.ventana {
+    width: 800px; /* Aumentamos el ancho */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px 40px;
+}
+.tabs {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.tab {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+}
+.tab.active {
+    background-color: #ccc;
+}
+.content-section {
+    display: none;
+    padding-top: 20px;
+    border: 1px solid #ccc; /* Línea divisoria */
+    border-top: none;
+    padding: 20px;
+}
+.content-section.active {
+    display: block;
+}
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Mantenimiento {
+    margin-bottom: 20px;
+}
+.Mantenimiento form {
+    display: grid;
+    gap: 10px;
+}
+.Mantenimiento label {
+    color: #aaa;
+}
+.Mantenimiento input,
+.Mantenimiento select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+.Mantenimiento .Direccion input {
+    height: 60px; /* Aumentamos el tamaño del campo Dirección */
+}
+.Mantenimiento .form-actions {
+    display: flex;
+    justify-content: center; /* Centramos los botones */
+    margin-top: 20px;
+}
+.Mantenimiento .btn {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.Mantenimiento .btn:last-child {
+    margin-right: 0;
+}
+.Mantenimiento .btn:hover {
+    background-color: #45a049;
+}
