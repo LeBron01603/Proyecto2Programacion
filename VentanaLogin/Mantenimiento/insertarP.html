@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Paciente</title>
+    <link rel="stylesheet" href="insertP.css"> <!-- Vincula el archivo CSS externo -->
+</head>
+<body>
+    <div class="container">
+        <h2>Insertar Datos del Paciente</h2>
+        <form method="post">
+            <div class="grid-container">
+                <div class="form-group">
+                    <label for="tfNombre1">Primer Nombre</label>
+                    <input type="text" id="tfNombre1" name="primerNombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="tfNombre2">Segundo Nombre</label>
+                    <input type="text" id="tfNombre2" name="segundoNombre">
+                </div>
+                <div class="form-group">
+                    <label for="tfApellido1">Primer Apellido</label>
+                    <input type="text" id="tfApellido1" name="primerApellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="tfApellido2">Segundo Apellido</label>
+                    <input type="text" id="tfApellido2" name="segundoApellido">
+                </div>
+                <div class="form-group">
+                    <label for="tfNumero">Número Telefónico</label>
+                    <input type="text" id="tfNumero" name="numeroTelefono">
+                </div>
+                <div class="form-group">
+                    <label for="tfIdentificacion">Identificación</label>
+                    <input type="text" id="tfIdentificacion" name="identificacion">
+                </div>
+                <div class="form-group">
+                    <label for="tfResidencia">Residencia</label>
+                    <input type="text" id="tfResidencia" name="residencia">
+                </div>
+                <div class="form-group">
+                    <label for="tfEdad">Edad</label>
+                    <input type="text" id="tfEdad" name="edad">
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Enviar Datos</button>
+                <button type="button" onclick="window.history.back();">Volver</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

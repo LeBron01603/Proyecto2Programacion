@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; /* Color de fondo alternativo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('telemedicina.jpg') no-repeat center center fixed; /* Ajusta la imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px; /* Ajusta el padding para más espacio arriba y abajo */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ancho del contenedor principal */
+    max-width: 440px; /* Ancho máximo del contenedor principal */
+    margin: 50px auto; /* Centrado en la página */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de tamaño igual */
+    gap: 15px; /* Espacio entre las celdas */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.mi-clase {
+    font-family: 'Times New Roman', Times, serif; /* Mantienes la fuente Times New Roman */
+    font-weight: 700; /* Grosor semi-negrita */
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif; /* Establece el tipo de letra a Times New Roman */
+    font-weight: normal; /* Establece el peso de la fuente a normal (no negrita) */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+input[type="text"] {
+    width: 100%; /* Ocupa todo el ancho disponible en la celda */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #a2a0a0;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+    transition: border-color 0.3s ease; /* Agrega transición suave para el cambio de color del borde */
+}
+
+input[type="text"]:focus {
+    border-color: rgb(107, 255, 149); /* Cambia el color del borde al ser enfocado */
+    outline: none; /* Quita el contorno predeterminado */
+    box-shadow: 0 0 8px rgba(18, 231, 117, 0.8); /* Añade una sombra al ser enfocado */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Añade transición para ambos cambios */
+}
+
+button {
+    display: inline-block; /* Cambia a bloque en línea para que estén en línea horizontal */
+    width: 45%; /* Ancho del botón */
+    padding: 8px;
+    margin: 15px 5px; /* Ajusta el margen entre los botones */
+    border: none;
+    background-color: #6cb5ff;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #4c8bff;
+}
+
+.container h2 {
+    text-align: center; /* Centra solo el título h2 dentro del contenedor */
+    font-family: 'Arial', sans-serif; /* Cambia el tipo de letra del título */
+    font-size: 24px; /* Tamaño de fuente del título */
+    color: #333; /* Color del texto del título */
+    margin-top: 20px; /* Aumenta el margen superior para separar del contenido */
+    margin-bottom: 20px; /* Añade un margen inferior para separar del contenido */
+}
+
+
